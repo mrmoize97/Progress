@@ -1,34 +1,30 @@
 {
-  "name": "evolveidle",
-  "version": "1.3.13",
-  "description": "Evolve Idle",
+  "name": "progressidle",
+  "version": "0.0.1",
+  "description": "Progress Idle",
   "private": true,
   "scripts": {
     "build": "npm run evolve && npm run evolve-less && npm run wiki && npm run wiki-less",
-    "build-win": "npm run evolve && npm run evolve-less-win && npm run wiki && npm run wiki-less-win",
     "evolve": "node buildEvolve.js",
     "evolve-less": "lessc src/evolve.less evolve/evolve-unminified.css && csso -i evolve/evolve-unminified.css -o evolve/evolve.css && rm evolve/evolve-unminified.css",
-    "evolve-less-win": "lessc src/evolve.less evolve/evolve-unminified.css && csso -i evolve/evolve-unminified.css -o evolve/evolve.css && del evolve\\evolve-unminified.css",
     "wiki": "node buildWiki.js",
     "wiki-less": "lessc src/wiki/wiki.less wiki/wiki-unminified.css && csso -i wiki/wiki-unminified.css -o wiki/wiki.css && rm wiki/wiki-unminified.css",
-    "wiki-less-win": "lessc src/wiki/wiki.less wiki/wiki-unminified.css && csso -i wiki/wiki-unminified.css -o wiki/wiki.css && del wiki\\wiki-unminified.css",
     "serve": "servehere -c",
-    "deploy": "rm -rf dist && mkdir dist && cp -r *.html *.ico LICENSE evolve lib font strings wiki dist && gh-pages -d dist",
-    "deploy-win": "(rmdir /S /Q dist || echo recreating dist) && mkdir dist && xcopy /E /I evolve dist\\evolve && xcopy /E /I font dist\\font && xcopy /E /I lib dist\\lib && xcopy /E /I strings dist\\strings && xcopy /E /I wiki dist\\wiki && copy *.html dist && copy *.ico dist && copy LICENSE dist && gh-pages -d dist"
+    "deploy": "rm -rf dist && mkdir dist && cp -r *.html *.ico LICENSE evolve lib font strings wiki dist && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pmotschmann/Evolve.git"
+    "url": "git+https://github.com/mrmoize97/Progress.git"
   },
   "keywords": [
-    "Evolve"
+    "Progress"
   ],
-  "author": "Peter Motschmann",
-  "license": "MPL-2.0",
+  "author": "McKenzie Moize",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/pmotschmann/Evolve/issues"
+    "url": "https://github.com/mrmoize97/Progress/issues"
   },
-  "homepage": "https://github.com/pmotschmann/Evolve#readme",
+  "homepage": "https://github.com/mrmoize97/Progress#readme",
   "devDependencies": {
     "csso-cli": "^4.0.2",
     "ini": "^1.3.8",
@@ -38,7 +34,6 @@
   },
   "dependencies": {
     "esbuild": "0.17.19",
-    "node": "^16.1.0",
     "npmcli": "^1.2.2"
   }
 }
