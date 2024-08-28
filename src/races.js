@@ -3292,10 +3292,10 @@ export const traits = {
 
 export const races = {
     protoplasm: {
-        name: loc('race_protoplasm'),
-        desc: loc('race_protoplasm_desc'),
+        name: loc('rank_foundation'),
+        desc: loc('rank_foundation_desc'),
         type: 'organism',
-        home: loc('race_prehistoric'),
+        home: loc('rank_unsouled'),
         entity: loc('race_protoplasm_entity'),
         traits: {},
         solar: {

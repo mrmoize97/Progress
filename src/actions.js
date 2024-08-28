@@ -21,7 +21,7 @@ export const actions = {
     evolution: {
         rna: {
             id: 'evolution-rna',
-            title: loc('resource_RNA_name'),
+            title: loc('evo_stamina_title'),
             desc(){
                 let rna = global.race['rapid_mutation'] ? 2 : 1;
                 return loc('evo_rna',[rna]);
@@ -37,8 +37,8 @@ export const actions = {
         },
         dna: {
             id: 'evolution-dna',
-            title: loc('evo_dna_title'),
-            desc: loc('evo_dna_desc'),
+            title: loc('evo_madra_title'),
+            desc: loc('evo_madra_desc'),
             condition(){ return global.resource.hasOwnProperty('DNA') && global.resource.DNA.display && global.resource.DNA.amount < global.resource.DNA.max && !global.race['evoFinalMenu']; },
             cost: { RNA(){ return 2; } },
             action(){
@@ -48,7 +48,7 @@ export const actions = {
                 }
                 return false;
             },
-            effect: loc('evo_dna_effect'),
+            effect: loc('evo_madra_effect'),
             queue_complete(){ return 0; }
         },
         membrane: {
